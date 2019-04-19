@@ -97,9 +97,7 @@ class LottieView extends React.Component {
   }
 
   setNativeProps(props) {
-    UIManager.updateView(this.getHandle(), this.viewConfig.uiViewClassName, {
-      progress: props.progress,
-    });
+    UIManager.updateView(this.getHandle(), this.viewConfig.uiViewClassName, props);
   }
 
   play(startFrame = -1, endFrame = -1) {
